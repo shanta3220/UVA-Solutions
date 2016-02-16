@@ -18,4 +18,6 @@ int main()
         else cout<<"impossible\n";
       }
     }
+    return 0;
 }
+ 
