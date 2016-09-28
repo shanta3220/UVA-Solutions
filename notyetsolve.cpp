@@ -1,33 +1,21 @@
 #include <iostream>
-#include<string.h>
 using namespace std;
 char s[100000000],a[100000000];
 int main() {
 	
-	long long int i,j,k,n,l;
+	int n,count0=0,count1=0;
 	cin>>n;
-	for (i=0; i<n; i++)
+	for (int i=0; i<n; i++)
 	    cin>>s[i];
-	k=0;
-	for (i=0; i<n; i++){
-	    if((s[i]=='1' && s[i+1]=='0')){
-        i++;
-        continue;
+	
+	for (int i=0; i<n; i++){
+	    if(s[i]=='0')
+            count0++;
+       else count1++;
     }
-    else if((s[i+1]=='1'&&s[i]=='1' && s[i+2]=='0'&&s[i+3]=='0')){
-        i+=3;
-        continue;
-    }
-    else{
-            a[k]=s[i];
-            k++;
-    } 
-    
-    a[k]='\0';
-    }
-    
-    
-	l=strlen(a);
-    cout<<l<<"\n";
+     if(count0>count1)      
+    cout<<count0-count1<<"\n";
+    else cout<<count1-count0<<"\n";
 	return 0;
 }
+	
