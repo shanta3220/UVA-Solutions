@@ -1,14 +1,12 @@
 #include <iostream>
 using namespace std;
-char s[100000000],a[100000000];
+char s[200008]
 int main() {
 	
 	int n,count0=0,count1=0;
 	cin>>n;
-	for (int i=0; i<n; i++)
-	    cin>>s[i];
-	
 	for (int i=0; i<n; i++){
+	    cin>>s[i];
 	    if(s[i]=='0')
             count0++;
        else count1++;
