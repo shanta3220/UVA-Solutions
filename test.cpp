@@ -1,31 +1,25 @@
 #include <iostream>
-#include<string.h>
 using namespace std;
-
 int main() {
-	int a[21],b[21];
-	int c=0,b2=1,t,j=0;
-	cin >> t;
-	for(int i=0; i<t; i++){
-	    cin>>a[i];
-	     b[i]=0;
-	}  
-	for(int i=0; i<t; i++) {
-	    for(int j=i+1; j<t; j++){
-	     if (a[i]==a[j]){
-	         c++;
-	         b[j]+=c;
-	         a[j]=a[i]-c;
-	        }
-	 
-	    
-	    }
-	  }
-	    for(int i=0; i<t; i++){
-	    cout<< b[i] << " " <<a[i]<<"\n";
-	   
-	} 
-	    
-	
+	long long n,p,s2,i;
+	while(cin>>s2&&s2!=0){
+	int s = s2;
+	int flag=0;
+    while(s--){
+    for(i=2;i<=s/2;++i)
+    {
+      if(s%i==0)
+      {
+          flag=0;
+          break;
+      }
+      else flag=1;
+    }
+    if(flag==1)
+       break;
+    
+}
+  cout << s2 <<" = "<< s2-s <<" + "<< s <<"\n";
+}
 	return 0;
 }
