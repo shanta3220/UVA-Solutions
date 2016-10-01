@@ -1,47 +1,39 @@
-#include <iostream>
+#include<bitset>
+#include<cstdio>
+#include<map>
+#include<vector>
+ 
 using namespace std;
-
+ 
+bitset<10000010> bs;
+vector<int> primes;
+map<int, bool> is_prime;
+ 
+void sieve(long long upper_bound) {
+    bs.set();
+    bs[0] = bs[1] = 0;
+    for(long long i = 2; i <= upper_bound + 1; i++) {
+        if(bs[i]) {
+            for(long long j = i * i; j <= upper_bound + 1; j += i)
+                bs[j] = 0;
+            primes.push_back((int) i);
+            is_prime[i] = true;
+        }
+    }
+}
+ 
+int n;
+ 
 int main() {
-	long long n,p,s2,i;
-	while(cin>>s2&&s2!=0){
-	int s = s2;
-	int flag=0;
-	
-    while(s--){
-    for(i=2;i<=s/2;++i)
-    {
-      if(s%i==0)
-      {
-          flag=0;
-         break;
-      }
-      else flag=1;
+    sieve(1000000);
+    for(;;) {
+        scanf("%d", &n);
+        if(n == 0) break;
+        int i;
+        for(i = 0; i < primes.size(); i++) {
+            if(is_prime[n - primes[i]])
+                break;
+        }
+        printf("%d = %d + %d\n", n, primes[i], n - primes[i]);
     }
-    if(flag==1)
-       break;
-    
-}
-    int s3=s;
-    p=s2-s;
-    if(p==1||p==2||p%3==0&&p>3||p%5==0&&p>5){
-        while(s--){
-    for(i=2;i<=s/2;++i)
-    {
-      if(s%i==0)
-      {
-          flag=0;
-         break;
-      }
-      else flag=1;
-    }
-    if(flag==1)
-       break;
-    
-}
-
-}
-
-  cout << s2 <<" = "<< s2 - s <<" + "<< s <<"\n";
-}
-	return 0;
 }
