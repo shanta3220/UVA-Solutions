@@ -13,20 +13,20 @@ int main() {
 	    for(int i = 0; i < n; i++){
 	        cin>>m;
 	        m2 = m;
-	        while( m > 29){
-	            m-=29;
+	        while( m >= 30){
+	            m-=30;
 	            sum1+=10;
 	            
 	       }
 	       
-	       if(m!=29) 
+	       if(m!=30) 
 	           sum1+=10;
-	       while( m2 > 59){
-	            m2 -= 59;
+	       while( m2 >= 60){
+	            m2 -= 60;
 	            sum2+=15;
 	            
 	       }
-	       if(m2!=59){
+	       if(m2!=60){
 	           sum2+=15;
 	       }
 	   }
