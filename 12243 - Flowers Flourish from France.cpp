@@ -1,30 +1,28 @@
 #include<iostream>
 #include<string>
+
 using namespace std;
 
 int main() {
 	string s;
-	int fact=1,i=1;
-	while(getline(cin,s)&&s[0]!='*'){
-	    if(s.size()==1) cout <<"Y\n";
-	    else {
-	    for(int i=1; i<s.size();i++){
-	        if(s[i]==' '){
-	            if(s[i+1]==s[0]||s[i+1]-32==s[0]||s[i+1]+32==s[0])
-	                fact=1;
-	            else {
-	                fact =0;
-	                break;
-	                
-	            }
+	int i = 1;
+	
+	while(getline(cin, s) && s != "*"){
+	    int fact = 1;
+	    s[0] = tolower(s[0]);
+	    for(int i = 0; i < s.size()-1; i++){
+	        if(s[i] == ' '){
+	            if(tolower(s[i+1]) !=s [0])
+	                fact = 0;
+	            
 	            
 	        }
 	        
 	    }
-	    if(fact==1)
-	        cout <<"Y\n";
-	    else cout <<"N\n";
-	}
+	    if(fact == 1)
+	        cout << "Y\n";
+	    else cout << "N\n";
+	
 	}
 	return 0;
 }
