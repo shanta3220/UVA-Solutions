@@ -11,7 +11,7 @@ int main() {
 	        cin >> c[i];
 	    }
 	    if(c[1] == 0){
-	        cout << "Case " << j++ << ": 0 0\n";
+	        cout << "Case " << j++ << ": " << highjump << " " << lowjump<<"\n";
 	        break;
 	    }
 	    else jump = c[0];
@@ -26,7 +26,7 @@ int main() {
 	        }
 	        else continue;
 	    }
-	    cout << "Case " << j++ << ": 0 0\n";
+	    cout << "Case " << j++ << ": " << highjump << " " << lowjump<<"\n";
 	}
 	return 0;
 }
