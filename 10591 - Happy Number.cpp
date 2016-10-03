@@ -22,9 +22,10 @@ int main() {
 	           cout << "Case #" << j++ << ": " << n2 <<  " is a Happy number.\n";
 	     else cout << "Case #" << j++ << ": " << n2 << " is an Unhappy number.\n";  
        	     }
-	    else if (n == 1 || n == 7 )
+	     else if (n == 1 || n == 7 )
 	           cout << "Case #" << j++ << ": " << n2 <<  " is a Happy number.\n";
-	    else cout << "Case #" << j++ << ": " << n2 << " is an Unhappy number.\n";  
+	     else cout << "Case #" << j++ << ": " << n2 << " is an Unhappy number.\n";  
         }
 	return 0;
 }
+ 
