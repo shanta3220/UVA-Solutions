@@ -1,53 +1,28 @@
 #include <iostream>
-#include <string.h>
 using namespace std;
 
 int main() {
-	int t,i;
-    string s;
-	int germany = 0, italy = 0, france = 0, turkey = 0,spain = 0, england = 0;
-    cin>>t;
-    while(t--){
-	   getline(cin,s);
-	   for(int i = 0; i<s.size();i++){
-	    if(s[i]=='G') {
-	        germany++;
-	        break;
-	        
-	    }
-	    else if (s[i]=='I') {
-	        italy++;
-	        break;
-	        
-	    }
-	    else if  (s[i]=='F') {
-	        france++;
-	        break;
-	        
-	    }
-	    else if  (s[i]=='T') {
-	        turkey++;
-	        break;
-	        
-	    }
-	    else if  (s[i]=='S') {
-	        spain++; break;
-	        
-	    }
-	    else if  (s[i]=='E'){ 
-	        england++; 
-	        break;
-	        
-	    }
-	    else continue;
-	   }
+	long long int n, n2, j = 1, t, sum, r;
+	cin >> t;
+	while(t--){
+	    cin >> n2;
+	    
+        if(n2 < 10)  n = n2 * n2;
+        else n = n2;
+   
+	    while (n > 9){
+	        sum = 0;
+	        while( n != 0){
+	            r = n % 10;
+	            sum += r * r;
+	            n = n/10;
+	            
+	        }
+	        n = sum;
+	     }
+	     if(n == 1 || n ==7)
+	           cout << "Case #" << j++ << ": " << n2 <<  " is a Happy number.\n";
+	        else cout << "Case #" << j++ << ": " << n2 << " is an Unhappy number.\n";  
     }
-	   if(england>0) cout<<"England "<< england<<"\n";
-	   if(france>0) cout<<"France "<<france<<"\n";
-	   if(germany>0) cout<<"Germany "<<germany<<"\n";
-       if(italy>0) cout<<"Italy "<<italy<<"\n";
-       if(spain>0) cout<<"Spain "<<spain<<"\n";
-       if(turkey>0) cout<<"Turkey "<<turkey<<"\n";
-    
 	return 0;
 }
