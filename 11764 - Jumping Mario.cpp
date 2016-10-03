@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	int t, n, c[50], lowjump, highjump,jump, j = 1;
+	int t, n, c[50], lowjump, highjump, jump, j = 1;
 	cin  >> t;
 	while(t--){
 	    cin >> n;
