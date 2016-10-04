@@ -1,19 +1,31 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
-
+int a[1000],b[1000],c[1000];
 int main() {
-	int t, m, a, b, s1, s2;
+	long long int t, z, m, sum;
 	cin >> t;
-	while(t--){
+    while(t--){
 	    cin >> m;
-	    s1 = 0, s2 = 0;
-	    for(int i = 0; i < m; i++){
-	        cin >> a >> b;
-	        s1 = s1 * 10 + a;
-	        s2 = s2 * 10 + b;
+	    z = 0;
+	    for(int i = 0; i < m; i++)
+	        cin >> a[i]>> b[i];
+	    for(int j = m - 1; j>=0; j++){   
+	        sum = a[j] + b[j] + z;
+	        if(sum > 9){
+	            c[j]= sum%10;
+	            z = 1;
+	        }
+	        else{
+	          c[j] = sum;
+	          z =0;
+	        }
 	        
-	    }
-	    cout << s1 + s2 << "\n";
+	   }
+	   for(int j = 0; j < m; j++)
+        cout<< c[j]<<"\n";
+        if(t!=0) cout<< "\n";
+       
 	    
 	}
 	
