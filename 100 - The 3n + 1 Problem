@@ -2,30 +2,29 @@
 using namespace std;
 
 int main() {
-	long long  sum, i, n, j, k, count, current, temp;
+	int sum, i, n, j, k, count, current, temp;
 	while(cin >> i >> j){
-	   cout<< i << " " <<j<<" ";
+	   cout << i << " " << j << " ";
 	    current = 0;
-	    if(i>j){
+	    if(i > j){
 	        temp = j;
 	        j = i;
 	        i = temp;
 	        
 	    }
-	        
-	    for(k = i; k <= j; k++){
+	   for(k = i; k <= j; k++){
 	        sum = k;
 	        count = 1;
 	        while(sum != 1){
-	            if(sum%2==0)
+	            if(sum % 2 == 0)
 	                sum = sum/2;
-	            else sum = sum * 3 +1;
+	            else sum = sum * 3 + 1;
 	            count++;
 	        }
-	        if(current<count)
+	        if(current < count)
 	            current = count;
 	    }
-	    cout << current <<"\n";
+	    cout << current << "\n";
 	}
 	return 0;
 }
