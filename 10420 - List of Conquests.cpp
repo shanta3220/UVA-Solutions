@@ -1,6 +1,6 @@
 /* few notes to myself(ignore this thanks):
-1.  why i used const_iterator instead of iterator: it doesn't allow to write or modify the members of a container 
-2. 	it can be written like this ->	map<string, int>:: const_iterator i;
+1.  why i used const_iterator instead of iterator: it doesn't allow to write or modify the members of a container. 
+2. 	it can also be written like this ->	map<string, int>:: const_iterator i;
 	for(i = beauty.begin(); i != beauty.end(); i++ )
 	    cout << (*i).first <<" " << (*i).second <<"\n";
 	    
