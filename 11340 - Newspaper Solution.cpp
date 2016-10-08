@@ -22,11 +22,13 @@ int main() {
 	        getline(cin,s);
 	        for(int i = 1; i <= n; i++){
 	            for(int k = 0; k < s.size(); k++){
-    	        	if(s[k]==a[i]) sum += b[i];
-    	      	    } 
+    	        if(s[k]==a[i]) sum += b[i];
+    	       
+    	        } 
 	        }
-	   }
-	   cout << sum/100 <<"$\n";
+	   
+	    }
+	   printf("%.2lf$\n",sum/100);
 	}
 	return 0;
 }
