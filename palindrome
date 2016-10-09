@@ -17,6 +17,35 @@ bool isPalindrome(string input)
 	
 	return isPalindrome;
 }
+bool isMirrored(string input)
+{
+	int len = input.length();
+	
+    bool isPalindrome = true;
+    for(int i = 0; i<len; i++){
+        if(input[i]=='B'||input[i]=='C'||input[i]=='D'||input[i]=='F'||input[i] =='G'||input[i]=='K'||input[i]=='N'||input[i]=='4'||input[i]=='6'||input[i]=='P'||input[i]=='Q' ||input[i]=='R'||input[i]=='7'||input[i]=='9'){
+            isPalindrome = false;
+            return isPalindrome;
+        }    
+        else if(input[i]=='2') input[i] ='S';
+        else if(input[i]=='3') input[i] ='E';
+        else if(input[i]=='2') input[i] ='S';
+        else if(input[i]=='L') input[i] ='J';
+        else if(input[i]=='0') input[i] ='O';
+        else if(input[i]=='5') input[i] ='Z';
+    }
+	for(int j = 0; j<len/2; j++)
+	{
+		if(input[j] != input[len - 1 -j])
+		{
+			isPalindrome = false;	
+			break;
+			
+		}
+	}
+	
+	return isPalindrome;
+}
 
 int main()
 {
@@ -25,8 +54,10 @@ int main()
     string s;
     cin >> s;
     bool truth = isPalindrome(s);
-    if(truth)
-    cout <<"Palindrome\n";
+    bool truth2 = isMirrored(s);
+    if(truth==1 && truth2 ==1) cout <<"Mirrored Palindrome\n";
+    else if(truth==1 && truth2 ==0)cout <<"Palindrome\n";
+    else if(truth==0 && truth2 ==1)cout <<"Mirrored\n";
     else cout <<"Notpalindrome\n";
 	return 0;
 }
