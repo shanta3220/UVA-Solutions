@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+bool isPalindrome(string input)
+{
+	int len = input.length();
+    bool isPalindrome = true;
+	for(int j = 0; j<len/2; j++)
+	{
+		if(input[j] != input[len - 1 -j])
+		{
+			isPalindrome = false;	
+			break;
+			
+		}
+	}
+	
+	return isPalindrome;
+}
+
+int main()
+{
+    char a[100],b[100];
+    int i,k;
+    string s;
+    cin >> s;
+    bool truth = isPalindrome(s);
+    if(truth)
+    cout <<"Palindrome\n";
+    else cout <<"Notpalindrome\n";
+	return 0;
+}
