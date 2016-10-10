@@ -28,7 +28,7 @@ int main() {
 	}
 	
 	map<string, int> :: const_iterator i;
-	for(i = beauty.begin(); i != beauty.end(); i++ )
+	for(int i = beauty.begin(); i != beauty.end(); i++ )
 	    cout << i -> first <<" " << i-> second <<"\n";
 	return 0;
 }
