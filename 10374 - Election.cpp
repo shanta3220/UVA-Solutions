@@ -30,14 +30,14 @@ int main() {
 	    string winner;
 	    map<string, string> :: iterator i;
 	    for(i = map1.begin(); i != map1.end(); i++){
-            c = map2[(*i).first];
+            	c = map2[(*i).first];
 	        if ( c > max){
 	            max = c;
 	            maxn = 0;
 	            winner = (*i).second;
-	        }
-            if (c == max) 
-                maxn++;
+	    	}
+            	if (c == max) 
+                    maxn++;
             }
 		
 	    if (maxn != 1)
