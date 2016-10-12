@@ -19,14 +19,14 @@ int main() {
 	        map1[cans] = party;
 	    }
 	    
-        cin >> n;
+            cin >> n;
 	    while(getchar()!='\n');
 	    while(n--){
 	        getline(cin, cans);
 	        map2[cans]+=1;
 	    }
 	   
-        int max = 0, maxn = 0, c;
+            int max = 0, maxn = 0, c;
 	    string winner;
 	    map<string, string> :: iterator i;
 	    for(i = map1.begin(); i != map1.end(); i++){
