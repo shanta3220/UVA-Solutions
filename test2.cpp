@@ -9,7 +9,7 @@ int main() {
 	cin >> t;
 	while(t--){
 	    cin >> n;
-	    while(getchar()!='\n');
+	    cin.ignore();
 	    map <string, string> map1;
 	    map <string, int > map2;
 	    while(n--){
@@ -18,7 +18,7 @@ int main() {
 	        map1[cans] = party;
 	    }
 	   cin >> n;
-	   while(getchar()!='\n');
+	   cin.ignore();
 	   while(n--){
 	       cin >> cans;
 	       map2[cans]+=1;
@@ -34,7 +34,7 @@ int main() {
 	         maxn = 0;
 	         winner = (*i).second;
 	       }
-	       else if (map2[i->first] == max) {
+	       else if (c == max) {
 				maxn++;
             }
 	   }
