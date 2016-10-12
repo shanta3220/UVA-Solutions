@@ -20,7 +20,7 @@ int main() {
 	    }
 	    
 	    cout <<c<<"\n";
-  }         
+  	}         
 	
 	    
 	return 0;
