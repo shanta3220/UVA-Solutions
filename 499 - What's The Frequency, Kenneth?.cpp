@@ -13,7 +13,7 @@ int main() {
 	    max = 0;
 	    for (int i = 0; i < s.size(); ++i){
 	        if((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z')){
-    	    letters[s[i]]++;
+    	    	     letters[s[i]]++;
     	    if(max < letters[s[i]])
     	        max = letters[s[i]];
 	        }
