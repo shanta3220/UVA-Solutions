@@ -32,4 +32,3 @@ int main() {
 	    cout << i -> first <<" " << i-> second <<"\n";
 	return 0;
 }
-
