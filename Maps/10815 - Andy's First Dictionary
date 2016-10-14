@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <iterator>
+#include <sstream>
+using namespace std;
+
+int main() {
+	string s;
+    map<string, int> words;
+    stringstream s2;
+   	while(getline(cin,s)){
+   	    for (int i = 0; i < s.size(); ++i){
+    	    if(isalpha(s[i])) {
+    	        s[i] = tolower(s[i]);
+    	    }
+            else s[i] = ' ';
+   	     } 
+    	 s2.clear();
+         s2 << s;
+   	     while(s2 >> s)
+   	        words[s] = 1;
+	    
+    }
+	map<string, int> :: const_iterator i;
+       for(i = words.begin(); i != words.end(); i++){
+        	cout << i-> first<<"\n";
+    }
+    return 0;
+}
