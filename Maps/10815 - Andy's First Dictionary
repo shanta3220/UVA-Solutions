@@ -7,8 +7,8 @@ using namespace std;
 
 int main() {
 	string s;
-    map<string, int> words;
-    stringstream s2;
+    	map<string, int> words;
+    	stringstream s2;
    	while(getline(cin,s)){
    	    for (int i = 0; i < s.size(); ++i){
     	    if(isalpha(s[i])) {
