@@ -15,7 +15,7 @@ int main() {
     	        s[i] = tolower(s[i]);
     	    }
             else s[i] = ' ';
-   	     } 
+   	    } 
     	 s2.clear();
          s2 << s;
    	     while(s2 >> s)
