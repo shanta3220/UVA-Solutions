@@ -21,10 +21,10 @@ int main() {
    	     while(s2 >> s)
    	        words[s] = 1;
 	    
-    }
+    	}
 	map<string, int> :: const_iterator i;
-       for(i = words.begin(); i != words.end(); i++){
+       	for(i = words.begin(); i != words.end(); i++){
         	cout << i-> first<<"\n";
-    }
-    return 0;
+    	}
+	return 0;
 }
